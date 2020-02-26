@@ -21,7 +21,7 @@ app.use('/', express.static('public'));
  */
 
 app.get('/banana', (request, response)=>{
-  response.send("ehllo");
+  response.send("Hello");
 });
 
 /*
@@ -33,8 +33,12 @@ app.get('/banana', (request, response)=>{
 app.get('/react', (req, res) => {
   const myHtml = `
     <html>
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="/style.css" rel="stylesheet"/>
+    </head>
       <body>
-        <h1>Wow, react</h1>
+        <h1>Twitter Feed</h1>
         <div id="app"></div>
         <script type="text/javascript" src="/main.js"></script>
       </body>
@@ -50,5 +54,5 @@ app.get('/react', (req, res) => {
  */
 
 app.listen(process.env.PORT, () => {
-  console.log(`ssssserver is now running on http://localhost:${process.env.PORT}`);
+  console.log(`🌻 Server is now running on http://localhost:${process.env.PORT} 🌻`);
 });
